@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:linear-gradient(to bottom,#020111,#081b3a,#000);
+    color:white;
+    text-align:center;
+}
+
+.hidden{
+    display:none !important;
+}
+
+/* ---------- Background ---------- */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+    background-size:40px 40px;
+    animation:twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.4;}
+to{opacity:1;}
+}
+
+.moon{
+    position:fixed;
+    top:40px;
+    right:60px;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#fff8dc;
+    box-shadow:0 0 50px white;
+    z-index:-2;
+}
+
+/* ---------- Common ---------- */
+
+section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* ---------- Intro ---------- */
+
+#intro h1{
+    font-size:60px;
+    color:#ff8eb7;
+}
+
+#intro h2{
+    margin:20px 0 40px;
+    font-weight:300;
+}
+
+#startBtn,
+#nextBtn,
+#yesBtn,
+#noBtn{
+
+    padding:16px 42px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#startBtn,
+#nextBtn,
+#yesBtn{
+
+    background:#ff006e;
+
+    color:white;
+}
+
+#startBtn:hover,
+#nextBtn:hover,
+#yesBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+#noBtn{
+
+background:#555;
+color:white;
+
+}
+
+/* ---------- Countdown ---------- */
+
+#timer{
+
+font-size:120px;
+
+color:#ff4d6d;
+
+margin-top:20px;
+
+}
+
+/* ---------- Gallery ---------- */
+
+#gallery h1{
+
+margin-bottom:25px;
+
+color:#ff9bc6;
+
+}
+
+#slideshow{
+
+width:340px;
+
+height:450px;
+
+border-radius:25px;
+
+object-fit:cover;
+
+border:5px solid white;
+
+box-shadow:0 0 35px hotpink;
+
+transition:1s;
+
+}
+
+/* ---------- Letter ---------- */
+
+.glass{
+
+width:85%;
+max-width:800px;
+
+height:420px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+padding:30px;
+
+border-radius:25px;
+
+margin-top:25px;
+
+overflow-y:auto;
+
+text-align:left;
+
+}
+
+#typingText{
+
+font-size:22px;
+
+line-height:40px;
+
+white-space:pre-wrap;
+
+overflow-wrap:break-word;
+
+}
+
+/* ---------- Proposal ---------- */
+
+#proposalPage h1{
+
+font-size:50px;
+
+color:#ffd4ea;
+
+margin-bottom:40px;
+
+}
+
+.buttons{
+
+position:relative;
+
+width:350px;
+
+height:120px;
+
+}
+
+.buttons button{
+
+position:absolute;
+
+}
+
+#yesBtn{
+
+left:20px;
+
+}
+
+#noBtn{
+
+right:20px;
+
+}
+
+/* ---------- Hearts ---------- */
+
+.heart{
+
+position:fixed;
+
+font-size:25px;
+
+pointer-events:none;
+
+animation:heartFloat linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+from{
+
+transform:translateY(100vh);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- Petals ---------- */
+
+.petal{
+
+position:fixed;
+
+width:18px;
+
+height:18px;
+
+background:#ff6f91;
+
+border-radius:50% 0 50% 50%;
+
+transform:rotate(45deg);
+
+pointer-events:none;
+
+animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+from{
+
+transform:translateY(-30px) rotate(0deg);
+
+}
+
+to{
+
+transform:translateY(110vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+#intro h1{
+
+font-size:38px;
+
+}
+
+#slideshow{
+
+width:260px;
+height:350px;
+
+}
+
+#proposalPage h1{
+
+font-size:34px;
+
+}
+
+#typingText{
+
+font-size:18px;
+
+line-height:30px;
+
+}
+
+}
